@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sri Lanka Youth Lifestyle & Future Trends Survey 2026</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:"Segoe UI",Arial,sans-serif;
+}
+
+body{
+margin:0;
+background:#f3f6fb;
+height:100vh;
+overflow:hidden;
+}
+
+
+/* ALL SCREENS */
+
+.screen{
+
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+
+width:92%;
+max-width:450px;
+
+}
+
+
+.hidden{
+display:none !important;
+}
+
+
+
+/* SURVEY */
+
+.header{
+
+background:#0067b8;
+color:white;
+padding:25px;
+
+border-radius:15px 15px 0 0;
+
+}
+
+
+.card{
+
+background:white;
+padding:25px;
+
+border-radius:0 0 15px 15px;
+
+box-shadow:0 5px 25px rgba(0,0,0,.2);
+
+max-height:85vh;
+overflow-y:auto;
+
+}
+
+
+
+h1,h2{
+color:#222;
+}
+
+
+p{
+
+font-size:16px;
+line-height:1.6;
+
+}
+
+
+
+.question{
+
+margin-top:20px;
+
+font-weight:600;
+
+}
+
+
+input,select{
+
+width:100%;
+
+padding:12px;
+
+margin-top:8px;
+
+border:1px solid #ccc;
+
+border-radius:8px;
+
+font-size:16px;
+
+}
+
+
+
+.option{
+
+margin-top:10px;
+
+}
+
+
+
+button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:8px;
+
+background:#0067b8;
+
+color:white;
+
+font-size:17px;
+
+margin-top:25px;
+
+cursor:pointer;
+
+}
+
+
+
+
+/* LOADING */
+
+.loading{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 5px 25px #aaa;
+
+}
+
+
+.loader{
+
+font-size:50px;
+
+animation:spin 1.5s infinite;
+
+}
+
+
+@keyframes spin{
+
+50%{
+transform:rotate(180deg);
+}
+
+}
+
+
+
+/* PROPOSAL */
+
+.proposal{
+
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+
+height:100vh;
+
+width:100%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+
+.proposalBox{
+
+width:90%;
+
+max-width:420px;
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+text-align:center;
+
+color:#333;
+
+}
+
+
+
+.ring{
+
+font-size:90px;
+
+animation:pulse 1.5s infinite;
+
+}
+
+
+
+@keyframes pulse{
+
+50%{
+transform:scale(1.2);
+}
+
+}
+
+
+
+#yes{
+
+background:#00c853;
+
+width:40%;
+
+}
+
+
+#no{
+
+background:#ff1744;
+
+width:40%;
+
+position:absolute;
+
+}
+
+
+
+.final{
+
+background:linear-gradient(135deg,#667eea,#764ba2);
+
+height:100vh;
+
+width:100%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+.finalBox{
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+text-align:center;
+
+width:90%;
+
+max-width:420px;
+
+}
+
+
+
+.heart{
+
+position:absolute;
+
+font-size:25px;
+
+animation:fall 4s linear infinite;
+
+}
+
+
+@keyframes fall{
+
+from{
+transform:translateY(-50px);
+}
+
+to{
+transform:translateY(110vh);
+}
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- PAGE 1 : SURVEY -->
+
+<div class="screen" id="survey">
+
+
+<div class="header">
+
+<h2 style="color:white">
+🇱🇰 Sri Lanka Youth Lifestyle & Future Trends Survey 2026
+</h2>
+
+
+<p>
+Understanding youth lifestyle patterns and future expectations in Sri Lanka.
+</p>
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<div class="question">
+1. Name
+</div>
+
+<input type="text" placeholder="Enter your name">
+
+
+
+<div class="question">
+2. Age Range
+</div>
+
+<select>
+
+<option>Select</option>
+<option>Below 20</option>
+<option>20 - 25</option>
+<option>26 - 30</option>
+<option>Above 30</option>
+
+</select>
+
+
+
+
+<div class="question">
+3. Gender
+</div>
+
+<select>
+
+<option>Select</option>
+<option>Female</option>
+<option>Male</option>
+
+</select>
+
+
+
+
+<div class="question">
+4. Marital Status
+</div>
+
+
+<select>
+
+<option>Select</option>
+<option>Single</option>
+<option>Married</option>
+
+</select>
+
+
+
+
+<div class="question">
+5. District
+</div>
+
+
+<select>
+
+<option>Select</option>
+<option>Colombo</option>
+<option>Gampaha</option>
+<option>Kandy</option>
+<option>Galle</option>
+<option>Other</option>
+
+</select>
+
+
+
+
+
+<div class="question">
+6. Hometown
+</div>
+
+
+<input type="text" placeholder="Enter hometown">
+
+
+
+
+
+<div class="question">
+
+7. Biggest challenge for Sri Lankan youth today?
+
+</div>
+
+
+<select>
+
+<option>Cost of living</option>
+<option>Job opportunities</option>
+<option>Education</option>
+<option>Migration</option>
+
+</select>
+
+
+
+
+
+
+<div class="question">
+
+8. Most valuable quality in a person?
+
+</div>
+
+
+<select>
+
+<option>Honesty</option>
+<option>Kindness</option>
+<option>Loyalty</option>
+<option>Sense of humour</option>
+
+</select>
+
+
+
+
+
+<button onclick="submitForm()">
+
+Submit Response
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PAGE 2 : LOADING -->
+
+
+<div class="screen hidden" id="loading">
+
+
+<div class="loading">
+
+
+<div class="loader">
+
+🤖
+
+</div>
+
+
+<h2>
+Submitting response...
+</h2>
+
+
+<p>
+
+Analysing answers...<br><br>
+
+Preparing final result...
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- PAGE 3 : PROPOSAL -->
+
+
+<div class="screen hidden proposal" id="proposal">
+
+
+<div class="proposalBox">
+
+
+<div class="ring">
+💍
+</div>
+
+
+<h1>
+Hansi ❤️
+</h1>
+
+
+<p>
+
+Survey analysis completed.
+
+<br><br>
+
+A special result has been generated.
+
+<br><br>
+
+<b>
+Will you be my fiancée?
+</b>
+
+</p>
+
+
+
+<button id="yes" onclick="yesClick()">
+
+YES ❤️
+
+</button>
+
+
+<button id="no">
+
+NO 😅
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PAGE 4 : FINAL -->
+
+
+<div class="screen hidden final" id="final">
+
+
+<div class="finalBox">
+
+
+<h1>
+🎉❤️
+</h1>
+
+
+<h2>
+Tharindu ❤️ Hansi
+</h2>
+
+
+<p>
+
+Congratulations Hansi.
+
+<br><br>
+
+You completed the most important survey.
+
+<br><br>
+
+Thank you for choosing me.
+
+<br><br>
+
+I promise to care for you,
+support you,
+and keep making you smile.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+function showPage(id){
+
+document.querySelectorAll(".screen")
+.forEach(function(x){
+
+x.classList.add("hidden");
+
+});
+
+
+document.getElementById(id)
+.classList.remove("hidden");
+
+}
+
+
+
+
+function submitForm(){
+
+showPage("loading");
+
+
+setTimeout(function(){
+
+showPage("proposal");
+
+startNo();
+
+},3000);
+
+
+}
+
+
+
+
+
+
+
+function startNo(){
+
+
+let no=document.getElementById("no");
+
+
+function move(){
+
+no.style.left=
+Math.random()*80+"vw";
+
+
+no.style.top=
+Math.random()*80+"vh";
+
+
+}
+
+
+no.addEventListener("mouseover",move);
+
+no.addEventListener("touchstart",move);
+
+no.addEventListener("click",move);
+
+
+}
+
+
+
+
+
+
+function yesClick(){
+
+showPage("final");
+
+
+for(let i=0;i<80;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.animationDuration=
+(2+Math.random()*4)+"s";
+
+
+document.body.appendChild(h);
+
+
+}
+
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>
